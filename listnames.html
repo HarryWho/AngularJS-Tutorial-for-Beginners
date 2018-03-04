@@ -1,0 +1,12 @@
+
+<input type=text ng-model="searchBx" />
+<div ng-controller="people">
+                
+        <ul>
+            <h2>Names and ages of programmers in the local area</h2>
+            <li ng-repeat="person in persons | filter:searchBx">
+                {{ person.Name}} is Aged {{person.Age}}
+            </li>
+            <button ng-click="getNames()">Get Names</button>
+        </ul>
+    </div>
